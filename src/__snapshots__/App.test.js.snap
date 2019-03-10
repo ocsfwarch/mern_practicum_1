@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders a snapshot 1`] = `
+<div
+  className="container"
+>
+  <nav
+    className="navbar navbar-expand-lg navbar-dark navbar-test"
+  >
+    <div
+      className="navbar-brand"
+      title="MERN Stack Practium"
+    >
+      <a
+        className="link-ocsa"
+        href="/"
+        onClick={[Function]}
+      >
+        MERN Stack Practium
+      </a>
+    </div>
+    <div
+      className="collapse navbar-collapse"
+    >
+      <ul
+        className="navbar-nav mr-auto"
+      >
+        <li
+          className="navbar-item nav-item-ocsa"
+        >
+          <a
+            className="nav-link btn btn-dark btn-ocsa"
+            href="/create"
+            onClick={[Function]}
+          >
+            Upload Audio
+          </a>
+        </li>
+        <li
+          className="navbar-item nav-item-ocsa"
+        >
+          <a
+            className="nav-link btn btn-dark btn-ocsa"
+            href="/record"
+            onClick={[Function]}
+          >
+            Create Audio
+          </a>
+        </li>
+        <li
+          className="navbar-item nav-item-ocsa"
+        >
+          <a
+            className="nav-link btn btn-dark btn-ocsa"
+            href="/search"
+            onClick={[Function]}
+          >
+            Transcript List
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <h3>
+      MERN Stack Web Dev Practicum
+    </h3>
+    <p>
+      This application will allow users the ability to upload/record speech/conversation of up to 60 minutes, translates the audio and sends a text transcript to th user's email upon completion.
+      <br />
+      <strong>
+        Upload Audio
+      </strong>
+       - Select this menu item to upload an existing audio file for translation.
+      <br />
+      <strong>
+        Create Audio
+      </strong>
+       - Select this menu item to record a live audio file for translation.
+      <br />
+      <strong>
+        Transcript List
+      </strong>
+       - Select this menu item to search old transcripts.
+    </p>
+  </div>
+</div>
+`;

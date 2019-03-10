@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders a snapshot 1`] = `
+<div>
+  <h3>
+    Search Transcript List
+  </h3>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <label>
+        EMail
+      </label>
+      <input
+        autoFocus={true}
+        className="form-control"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <input
+        className="btn btn-primary"
+        type="submit"
+        value="Search"
+      />
+       
+      <input
+        className="btn btn-primary"
+        onClick={[Function]}
+        type="button"
+        value="Close"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label>
+        Results
+      </label>
+      <input
+        className="form-control"
+        id="formError"
+        name="formError"
+        readOnly="readOnly"
+        type="text"
+        value=""
+      />
+    </div>
+  </form>
+</div>
+`;

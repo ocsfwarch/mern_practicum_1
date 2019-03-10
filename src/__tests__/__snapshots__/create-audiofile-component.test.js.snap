@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders a snapshot 1`] = `
+<div>
+  <h3>
+    Create Audio File
+  </h3>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <label>
+        File Name
+      </label>
+      <input
+        autoFocus={true}
+        className="form-control"
+        id="file_name"
+        name="file_name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label>
+        File Description
+      </label>
+      <input
+        className="form-control"
+        id="file_description"
+        name="file_description"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label>
+        EMail
+      </label>
+      <input
+        className="form-control"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <input
+        className="btn btn-success"
+        disabled={false}
+        id="startRecord"
+        onClick={[Function]}
+        type="button"
+        value="Start Recording"
+      />
+       
+      <input
+        className="btn btn-danger"
+        disabled={true}
+        id="stopRecord"
+        onClick={[Function]}
+        type="button"
+        value="Stop Recording"
+      />
+       
+      <input
+        className="btn btn-primary"
+        disabled={true}
+        id="saveRecord"
+        type="submit"
+        value="Upload"
+      />
+       
+      <input
+        className="btn btn-primary"
+        onClick={[Function]}
+        type="button"
+        value="Close"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      Elapsed Time: 
+      <input
+        id="timer"
+        readOnly="readOnly"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <label>
+        Results
+      </label>
+      <input
+        className="form-control"
+        id="formError"
+        name="formError"
+        readOnly="readOnly"
+        type="text"
+        value=""
+      />
+    </div>
+  </form>
+</div>
+`;

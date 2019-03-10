@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders a snapshot 1`] = `
+<div>
+  <h3>
+    Audio to Text File List
+  </h3>
+  <table
+    className="table table-striped"
+    style={
+      Object {
+        "marginTop": 20,
+      }
+    }
+  >
+    <thead>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        EMail
+      </th>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
