@@ -38,6 +38,7 @@ The User enters a valid email address in the "EMail" input area.
 The User selects the "Start Recording" command button.  
 The System verifies the browser supports Web Speech.  
 The System starts recording the User audio through the microphone.  
+The System transcribes the User audio to text to a buffer.  
 The System displays the elapsed time of the recording.  
 The User selects the "Stop Recording" command button.  
 The System stops recording the User audio through the microphone.  
