@@ -6,12 +6,7 @@ export default class EditTextFileList extends Component{
         super(props);
 
         // Establish all bindings
-        this.onChangeFileName        = this.onChangeFileName.bind(this);
-        this.onChangeFileDescription = this.onChangeFileDescription.bind(this);
-        this.onChangeEmail           = this.onChangeEmail.bind(this);
-        this.onSubmit                = this.onSubmit.bind(this);
         this.onShowList              = this.onShowList.bind(this);
-        this.onChangeTranscripton    = this.onChangeTranscripton.bind(this);
 
         this.state={
             file_name: '',
@@ -19,35 +14,6 @@ export default class EditTextFileList extends Component{
             file_email:'',
             file_data:''
         }
-    }
-
-    // Set the default state
-    onChangeFileName(e){
-        this.setState({
-            file_name: e.target.value
-            }
-        )
-    }
-
-    onChangeFileDescription(e){
-        this.setState({
-            file_description: e.target.value
-            }
-        )
-    }
-
-    onChangeEmail(e){
-        this.setState({
-            email_name: e.target.value
-            }
-        )
-    }
-
-    onChangeTranscripton(e){
-        this.setState({
-            file_data: e.target.value
-            }
-        )
     }
 
     onShowList(){
@@ -70,37 +36,17 @@ export default class EditTextFileList extends Component{
            });
    }
 
-   onSubmit(e){
-        e.preventDefault();
-
-        console.log("Form Submitted");
-        console.log(`File Name: ${this.state.file_name}`);
-        console.log(`File Name: ${this.state.file_description}`);
-
-        const newFileItem = {
-            file_name : this.state.file_name,
-            file_description : this.state.file_description
-        }
-
-        axios.post('http://localhost:4000/mern1/update/'+this.props.match.params.id, newFileItem)
-            .then(res => console.log(res.data));
-
-        // Now go back to the complete list of entries
-        this.onShowList();          
-    }
-
     render(){
         return(
             <div>
                 <h3>View Transcription</h3>
-                <form onSubmit={this.onSubmit}>
+                <form >
                     <div className="form-group">
                         <label>Name: </label>
                         <input type="text"
                             className="form-control"
                             readOnly="readOnly"
                             value={this.state.file_name}
-                            onChange={this.onChangeFileName}
                         />
                     </div>
                     <div className="form-group">
@@ -109,7 +55,6 @@ export default class EditTextFileList extends Component{
                             className="form-control"
                             readOnly="readOnly"
                             value={this.state.file_description}
-                            onChange={this.onChangeFileDescription}
                         />
                     </div>
                     <div className="form-group">
@@ -119,7 +64,6 @@ export default class EditTextFileList extends Component{
                             className="form-control"
                             readOnly="readOnly"
                             value={this.state.file_data}
-                            onChange={this.onChangeTranscripton}
                         />
                     </div>
                     <div className="form-group">

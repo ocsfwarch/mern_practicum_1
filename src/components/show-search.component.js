@@ -36,10 +36,6 @@ export default class ShowSearch extends Component{
             this.props.history.push('/');
         }
 
-    componentDidMount(){
-        //document.getElementById("email").focus();
-    }
-
     validateUploadForm(){
         let isError = false;
 
@@ -81,16 +77,21 @@ export default class ShowSearch extends Component{
                             name="email"
                             id = "email"
                             className="form-control" 
+                            title="Enter a previous email"
                             value={this.state.email} 
                             onChange={this.onChangeEmail} 
                         />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Search" className="btn btn-primary" />
+                        <input type="submit" 
+                            value="Search" 
+                            className="btn btn-primary" 
+                            title="Select to perform the search" />
                         &nbsp;
                         <input type="button" 
                             value="Close" 
                             className="btn btn-primary"
+                            title="Select to close this page"
                             onClick={this.onShowDefault} 
                             />
                     </div>

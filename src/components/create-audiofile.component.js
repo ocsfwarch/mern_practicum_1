@@ -12,12 +12,9 @@ export default class CreateAudioFile extends Component{
         // Establish all bindings
         this.onStartRecording        = this.onStartRecording.bind(this);
         this.onStopRecording         = this.onStopRecording.bind(this);
-        this.onChangeFileName        = this.onChangeFileName.bind(this);
-        this.onChangeFileDescription = this.onChangeFileDescription.bind(this);
-        this.onChangeEmail           = this.onChangeEmail.bind(this);
+        this.handleInputChange       = this.handleInputChange.bind(this);
         this.onSubmit                = this.onSubmit.bind(this);
         this.onShowDefault           = this.onShowDefault.bind(this);
-        this.onChangeFormError       = this.onChangeFormError.bind(this);
 
         // Set the default state
         this.state={
@@ -41,35 +38,14 @@ export default class CreateAudioFile extends Component{
         this.emailInput           = React.createRef();
     }
 
-    onChangeFileName(e){
+    handleInputChange(e){
         this.setState({
-            file_name: e.target.value
-            }
-        )
-    }
-
-    onChangeFileDescription(e){
-        this.setState({
-            file_description: e.target.value
-            }
-        )
-    }
-
-    onChangeEmail(e){
-        this.setState({
-            email: e.target.value
-            }
-        )
+            [e.target.name]:e.target.value
+        });
     }
 
     onShowDefault(){
         this.props.history.push('/');
-    }
-
-    onChangeFormError(e){
-        this.setState({
-            formError: e.target.value
-        })
     }
 
     componentDidMount(){
@@ -285,7 +261,7 @@ export default class CreateAudioFile extends Component{
                             className="form-control" 
                             value={this.state.file_name} 
                             ref={this.filenameInput}
-                            onChange={this.onChangeFileName} 
+                            onChange={this.handleInputChange} 
                         />
                     </div>
                     <div className="form-group">
@@ -296,7 +272,7 @@ export default class CreateAudioFile extends Component{
                             className="form-control" 
                             value={this.state.file_description} 
                             ref={this.fileDescriptionInput}
-                            onChange={this.onChangeFileDescription} 
+                            onChange={this.handleInputChange} 
                         />
                     </div>
                     <div className="form-group">
@@ -307,7 +283,7 @@ export default class CreateAudioFile extends Component{
                             className="form-control" 
                             value={this.state.email} 
                             ref={this.emailInput}
-                            onChange={this.onChangeEmail} 
+                            onChange={this.handleInputChange} 
                         />
                     </div>
                     <div className="form-group">
@@ -315,6 +291,7 @@ export default class CreateAudioFile extends Component{
                             id="startRecord"
                             value="Start Recording" 
                             className="btn btn-success" 
+                            title="Select to start recording"
                             disabled={this.state.startRecordDis}
                             onClick={this.onStartRecording}
                             />&nbsp;
@@ -322,6 +299,7 @@ export default class CreateAudioFile extends Component{
                             id="stopRecord"
                             value="Stop Recording"  
                             className="btn btn-danger" 
+                            title="Select to stop recording"
                             disabled={this.state.stopRecordDis}
                             onClick={this.onStopRecording}
                             />&nbsp;
@@ -329,11 +307,13 @@ export default class CreateAudioFile extends Component{
                             id="saveRecord"
                             value="Upload" 
                             disabled={this.state.saveRecordDis}
-                            className="btn btn-primary" />
+                            className="btn btn-primary"
+                            title="Select to send your file for processing" />
                         &nbsp;
                         <input type="button" 
                             value="Close" 
                             className="btn btn-primary"
+                            title="Select to close this page"
                             onClick={this.onShowDefault} 
                             />
                     </div>
@@ -351,7 +331,8 @@ export default class CreateAudioFile extends Component{
                             id = "formError"
                             className="form-control" 
                             readOnly="readOnly"
-                            value={this.state.formError} 
+                            value={this.state.formError}
+                            onChange={this.handleInputChange} 
                         />
                     </div>
                </form>

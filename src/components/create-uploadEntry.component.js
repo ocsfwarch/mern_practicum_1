@@ -2,18 +2,15 @@ import React, {Component} from 'react';
 
 import axios from 'axios';
 
-export default class CreateTextFileList extends Component{
+export default class CreateUploadEntry extends Component{
 
     constructor(props){
         super(props);
 
         // Establish all bindings
-        this.onChangeFileName        = this.onChangeFileName.bind(this);
-        this.onChangeFileDescription = this.onChangeFileDescription.bind(this);
-        this.onChangeEmail           = this.onChangeEmail.bind(this);
+        this.handleInputChange       = this.handleInputChange.bind(this);
         this.onSubmit                = this.onSubmit.bind(this);
         this.onShowDefault           = this.onShowDefault.bind(this);
-        this.onChangeFormError       = this.onChangeFormError.bind(this);
 
         // Set the default state
         this.state={
@@ -30,31 +27,10 @@ export default class CreateTextFileList extends Component{
         
     }
 
-    onChangeFileName(e){
+    handleInputChange(e){
         this.setState({
-            file_name: e.target.value
-            }
-        )
-    }
-
-    onChangeFileDescription(e){
-        this.setState({
-            file_description: e.target.value
-            }
-        )
-    }
-
-    onChangeEmail(e){
-        this.setState({
-            email: e.target.value
-            }
-        )
-    }
-
-    onChangeFormError(e){
-        this.setState({
-            formError: e.target.value
-        })
+            [e.target.name]:e.target.value
+        });
     }
 
     onShowDefault(){
@@ -144,10 +120,11 @@ export default class CreateTextFileList extends Component{
                         <input autoFocus type="file" 
                             name="file_name"
                             id = "file_name"
-                            className="form-control" 
+                            className="form-control"
+                            title="This control will display available files" 
                             value={this.state.file_name} 
                             ref={this.filenameInput}
-                            onChange={this.onChangeFileName} 
+                            onChange={this.handleInputChange} 
                         />
                     </div>
                     <div className="form-group">
@@ -156,9 +133,10 @@ export default class CreateTextFileList extends Component{
                             name="file_description"
                             id = "file_description"
                             className="form-control" 
+
                             value={this.state.file_description} 
                             ref={this.fileDescriptionInput}
-                            onChange={this.onChangeFileDescription} 
+                            onChange={this.handleInputChange} 
                         />
                     </div>
                     <div className="form-group">
@@ -169,15 +147,19 @@ export default class CreateTextFileList extends Component{
                             className="form-control" 
                             value={this.state.email} 
                             ref={this.emailInput}
-                            onChange={this.onChangeEmail} 
+                            onChange={this.handleInputChange} 
                         />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Upload" className="btn btn-primary" />
+                        <input type="submit" 
+                            value="Upload" 
+                            className="btn btn-primary" 
+                            title="Select to send your audio file for processing" />
                         &nbsp;
                         <input type="button" 
                             value="Close" 
                             className="btn btn-primary"
+                            title="Select to close this page"
                             onClick={this.onShowDefault} 
                             />
                     </div>
