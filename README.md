@@ -2,9 +2,9 @@
 
 
 Project Overview:  
-This is a practium for the MERN stack, the goal is to build a full stack Javascript (MERN) application that allows users to upload/record speech/conversation of up to 60 minutes, translates the audio, and sends a text transcript to the user's email upon completion. This application will also allow a user to see archived text transcripts and includes frontend and backend test coverage.  
+This is a practicum for the MERN stack, the goal is to build a full stack Javascript (MERN) application that allows users to upload/record speech/conversation of up to 60 minutes, translates the audio, and sends a text transcript to the user's email upon completion. This application will also allow a user to see archived text transcripts and includes frontend and backend test coverage.  
 
-This application is composed of 2 main components: Front-end Web GUI (mern1_app) and Back-end Web Server (mern1_server). Communication between the front-end and back-end elemenets is structured and performed in a RESTful manner. The front-end will make requests to the back-end using http url command requests and json formatted parameters. The back-end will respond to these requests with json formatted data. Back-end serialization of data will be achieved using a NoSQL (MongoDB) database and local storage.  
+This application is composed of 2 main components: Front-end Web GUI (mern1_app) and Back-end Web Server (mern1_server). Communication between the front-end and back-end elements is structured and performed in a RESTful manner. The front-end will make requests to the back-end using http url command requests and json formatted parameters. The back-end will respond to these requests with json formatted data. Back-end serialization of data will be achieved using a NoSQL (MongoDB) database and local storage.  
 
 Overview - mern1_app:  
 This application is based on the React Javascript library. All user interaction pages are based on components using JSX. All components have an associated Jest test. User access of the interaction functionality of this application is through the top-level menu. Bootstrap styling is also used in the GUI. The main purpose of the GUI is to allow a user to transcribe audio input to text output.  
@@ -40,7 +40,7 @@ The System verifies the browser supports Web Speech.
 The System starts recording the User audio through the microphone.  
 The System displays the elapsed time of the recording.  
 The User selects the "Stop Recording" command button.  
-The System stops recordig the User audio through the microphone.  
+The System stops recording the User audio through the microphone.  
 The System stops the elapsed time of the recording.  
 The User selects the "Upload" command button.  
 The System verifies the User has entered all the required information.  
@@ -64,13 +64,13 @@ The System displays the "Audio to Text List" table display.
 This use case ends when the User selects the "Close" command button.  
 
 Testing:  
-Jest is used as the GUI testing framework. This was selected due to it's level of integration with React as well as it's ease of use. This application uses the snapshot functionality of Jest to verify changes to the GUI are correct. It is also used to guard against inadvertent changes that might occur during development. Postman was used as the url testing framework. Postman allows us to verify all links available in the application.  
+Jest is used as the GUI testing framework. This was selected due to its level of integration with React as well as its ease of use. This application uses the snapshot functionality of Jest to verify changes to the GUI are correct. It is also used to guard against inadvertent changes that might occur during development. Postman was used as the url testing framework. Postman allows us to verify all links available in the application.  
 
 Development Environment:  
 Microsoft Windows 7 VM  
 Chrome v 72  
 Microsoft Visual Studio Code
-MongoDb  
+MongoDB  
 Express  
 React  
 Node  
@@ -82,3 +82,4 @@ Postman
 Information Links:  
 W3C Web Speech API - https://w3c.github.io/speech-api/  
 React - https://reactjs.org  
+
