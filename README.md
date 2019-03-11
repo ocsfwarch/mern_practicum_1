@@ -80,5 +80,5 @@ Jest
 Postman   
   
 Information Links:  
-W3C Web Speech API - https://w3c.github.io/speech-api/ 
-React - https://reactjs.org
+W3C Web Speech API - https://w3c.github.io/speech-api/  
+React - https://reactjs.org  
