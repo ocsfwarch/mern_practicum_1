@@ -62,6 +62,7 @@ exports[`Renders a snapshot 1`] = `
         disabled={false}
         id="startRecord"
         onClick={[Function]}
+        title="Select to start recording"
         type="button"
         value="Start Recording"
       />
@@ -71,6 +72,7 @@ exports[`Renders a snapshot 1`] = `
         disabled={true}
         id="stopRecord"
         onClick={[Function]}
+        title="Select to stop recording"
         type="button"
         value="Stop Recording"
       />
@@ -79,6 +81,7 @@ exports[`Renders a snapshot 1`] = `
         className="btn btn-primary"
         disabled={true}
         id="saveRecord"
+        title="Select to send your file for processing"
         type="submit"
         value="Upload"
       />
@@ -86,6 +89,7 @@ exports[`Renders a snapshot 1`] = `
       <input
         className="btn btn-primary"
         onClick={[Function]}
+        title="Select to close this page"
         type="button"
         value="Close"
       />
@@ -111,6 +115,7 @@ exports[`Renders a snapshot 1`] = `
         className="form-control"
         id="formError"
         name="formError"
+        onChange={[Function]}
         readOnly="readOnly"
         type="text"
         value=""

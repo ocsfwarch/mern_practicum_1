@@ -20,6 +20,7 @@ exports[`Renders a snapshot 1`] = `
         id="email"
         name="email"
         onChange={[Function]}
+        title="Enter a previous email"
         type="text"
         value=""
       />
@@ -29,6 +30,7 @@ exports[`Renders a snapshot 1`] = `
     >
       <input
         className="btn btn-primary"
+        title="Select to perform the search"
         type="submit"
         value="Search"
       />
@@ -36,6 +38,7 @@ exports[`Renders a snapshot 1`] = `
       <input
         className="btn btn-primary"
         onClick={[Function]}
+        title="Select to close this page"
         type="button"
         value="Close"
       />

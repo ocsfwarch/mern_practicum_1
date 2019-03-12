@@ -5,9 +5,7 @@ exports[`Renders a snapshot 1`] = `
   <h3>
     View Transcription
   </h3>
-  <form
-    onSubmit={[Function]}
-  >
+  <form>
     <div
       className="form-group"
     >
@@ -16,7 +14,6 @@ exports[`Renders a snapshot 1`] = `
       </label>
       <input
         className="form-control"
-        onChange={[Function]}
         readOnly="readOnly"
         type="text"
         value=""
@@ -30,7 +27,6 @@ exports[`Renders a snapshot 1`] = `
       </label>
       <input
         className="form-control"
-        onChange={[Function]}
         readOnly="readOnly"
         type="text"
         value=""
@@ -44,7 +40,6 @@ exports[`Renders a snapshot 1`] = `
       </label>
       <textarea
         className="form-control"
-        onChange={[Function]}
         readOnly="readOnly"
         rows="10"
         value=""
