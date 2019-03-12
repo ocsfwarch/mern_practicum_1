@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+const ConstantsList = require("../constants.js");
 
 export default class EditTextFileList extends Component{
     constructor(props){
@@ -21,7 +22,9 @@ export default class EditTextFileList extends Component{
    }
 
    componentDidMount(){
-       axios.get('http://localhost:4000/mern1/'+this.props.match.params.id)
+    const strUrl = `http://${ConstantsList.SERVER_ADDRESS}:${ConstantsList.SERVER_PORT}/mern1/${this.props.match.params.id}`;
+    axios.get(strUrl)
+    //axios.get('http://localhost:4000/mern1/'+this.props.match.params.id)
            .then(response => {
                //alert(response.data.file_data);
                this.setState({

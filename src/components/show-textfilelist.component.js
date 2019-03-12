@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+const ConstantsList = require("../constants.js");
 
 const CreateFileListEntry = props => (
     <tr>
@@ -23,8 +24,8 @@ export default class TextFileList extends Component{
     }
 
     componentDidMount(){
-        //alert("Email = " + this.props.match.params.email);
-        axios.get('http://localhost:4000/mern1/search/'+this.props.match.params.email)
+        const strUrl = `http://${ConstantsList.SERVER_ADDRESS}:${ConstantsList.SERVER_PORT}/mern1/search/${this.props.match.params.email}`;
+        axios.get(strUrl)
             .then(response => {
                 this.setState({fileEntries: response.data});
             })
@@ -34,8 +35,8 @@ export default class TextFileList extends Component{
     }
 
     componentDidUpdate(){
-        //axios.get('http://localhost:4000/mern1')
-        axios.get('http://localhost:4000/mern1/search/'+this.props.match.params.email)
+        const strUrl = `http://${ConstantsList.SERVER_ADDRESS}:${ConstantsList.SERVER_PORT}/mern1/search/${this.props.match.params.email}`;
+        axios.get(strUrl)
             .then(response => {
                 this.setState({fileEntries: response.data});
             })

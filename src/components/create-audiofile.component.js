@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
+const ConstantsList = require("../constants.js");
 
 let finalTranscripts = [];
 let tempInterval = 0;
@@ -134,7 +135,7 @@ export default class CreateAudioFile extends Component{
 
             const fileToUpload = new File(finalTranscripts, this.state.file_name);
 
-            const strUrl = "http://localhost:4000/mern1/saveFile";
+            const strUrl = `http://${ConstantsList.SERVER_ADDRESS}:${ConstantsList.SERVER_PORT}/mern1/saveFile`;
             const formData = new FormData();
             formData.append('fileitem', fileToUpload);
             formData.append('model', JSON.stringify(newFileItem));
@@ -179,6 +180,11 @@ export default class CreateAudioFile extends Component{
                 formError:"Invalid email."
             });
             this.emailInput.current.focus();
+        }else if(finalTranscripts.length === 0){
+            isError = true;
+            this.setState({
+                formError:"No recording has been performed."
+            })
         }
 
         return isError;

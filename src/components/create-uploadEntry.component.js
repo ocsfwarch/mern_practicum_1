@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-
 import axios from 'axios';
+const ConstantsList = require("../constants.js");
 
 export default class CreateUploadEntry extends Component{
 
@@ -86,7 +86,7 @@ export default class CreateUploadEntry extends Component{
                 transcribe:true
             }
 
-            const strUrl = "http://localhost:4000/mern1/saveFile";
+            const strUrl = `http://${ConstantsList.SERVER_ADDRESS}:${ConstantsList.SERVER_PORT}/mern1/saveFile`;
             const formData = new FormData();
             formData.append('fileitem', document.querySelector('input[type="file"]').files[0]);
             formData.append('model', JSON.stringify(newFileItem));
